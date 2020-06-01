@@ -1,0 +1,83 @@
+/*  修改原先 DOM 的 css  */
+body {
+    margin: 0;
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+a {
+    text-decoration:none; /* 隱藏底線   */
+}
+header {
+    margin: 0;
+    padding: 4em 5em;   /* padding : 上下 左右; */
+    background-color: #464646;
+}
+footer {
+    background-color: #fafafa;
+    height: 80px;
+    padding: 3em 0;
+}
+
+
+
+/*  用 class 做部分裝飾, 一個 element 可以同時有多個 class 但只能有一個 id  */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.title-wrapper > .title, .title-wrapper > .subtitle {
+    color: aliceblue;
+    margin: 0 0; /*  修改原先 h1 的 margin */
+}
+.title {
+    font-weight: 700;
+}
+.subtitle {
+    font-size: 20px;
+    font-weight: 400;
+}
+#copyright {
+    text-align: center;
+}
+.main {
+    width: 90%vw;
+    position: relative;
+    /* background-color: #fafafadc; */
+    min-height: 410px;
+}
+.info {
+    padding: 2em 0;
+    width: 24%;
+    min-height: 250px;
+    display: inline-block;
+    margin: 2em 0;
+    vertical-align: top;            /*  對齊頂端  */
+}
+.info:hover {
+    cursor: pointer;                /*  指標改成按按鈕的感覺  */
+    background: #efefeffe;
+}
+
+.selfie {
+    width: 150px;
+    margin: 2em calc(50% - 75px);
+    margin-bottom: 4px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform .3s ease-in;      /*  把 transform 的改變做小動畫  */
+}
+.selfie.active {
+    transform: scale(1.2);                  /*  把 class 同時包含 selfie 跟 active 的 element 放大 1.2 倍  */
+}
+.info > .title {
+    width: 100%;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin: 8px 0;        /*  修改原先 h1 的 margin */
+}
+.details, .detail {
+    width: 100%;
+}
+.detail {
+    text-align: center;
+}
